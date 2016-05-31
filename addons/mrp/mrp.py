@@ -437,10 +437,6 @@ class mrp_bom_line(osv.osv):
         'product_uom': _get_uom_id,
         'sequence': 1,
     }
-    _sql_constraints = [
-        ('bom_qty_zero', 'CHECK (product_qty>0)', 'All product quantities must be greater than 0.\n' \
-            'You should install the mrp_byproduct module if you want to manage extra products on BoMs !'),
-    ]
 
     def onchange_uom(self, cr, uid, ids, product_id, product_uom, context=None):
         res = {'value': {}}
