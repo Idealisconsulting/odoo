@@ -781,6 +781,9 @@ class account_invoice(models.Model):
                     line2[tmp]['tax_amount'] += l['tax_amount']
                     line2[tmp]['amount_currency'] += l['amount_currency']
                     line2[tmp]['analytic_lines'] += l['analytic_lines']
+                    qty = l.get('quantity')
+                    if qty:
+                        line2[tmp]['quantity'] = line2[tmp].get('quantity', 0.0) + qty
                 else:
                     line2[tmp] = l
             line = []
@@ -1299,7 +1302,10 @@ class account_invoice_line(models.Model):
             doc = etree.XML(res['arch'])
             for node in doc.xpath("//field[@name='product_id']"):
                 if self._context['type'] in ('in_invoice', 'in_refund'):
-                    node.set('domain', "[('purchase_ok', '=', True)]")
+                    # Hack to fix the stable version 8.0 -> saas-12
+                    # purchase_ok will be moved from purchase to product in master #13271
+                    if 'purchase_ok' in  self.env['product.template']._fields:
+                        node.set('domain', "[('purchase_ok', '=', True)]")
                 else:
                     node.set('domain', "[('sale_ok', '=', True)]")
             res['arch'] = etree.tostring(doc)
