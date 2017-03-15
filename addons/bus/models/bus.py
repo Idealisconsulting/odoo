@@ -14,7 +14,7 @@ from odoo.tools.misc import DEFAULT_SERVER_DATETIME_FORMAT
 _logger = logging.getLogger(__name__)
 
 # longpolling timeout connection
-TIMEOUT = 50
+TIMEOUT = 5
 
 #----------------------------------------------------------
 # Bus
