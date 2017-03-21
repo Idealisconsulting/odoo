@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-14 00:10+0000\n"
-"PO-Revision-Date: 2016-04-30 19:10+0000\n"
+"PO-Revision-Date: 2016-07-31 08:28+0000\n"
 "Last-Translator: Martin Trigaux\n"
 "Language-Team: Italian (http://www.transifex.com/odoo/odoo-7/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -9943,7 +9943,7 @@ msgstr ""
 msgid ""
 "One of the documents you are trying to access has been deleted, please try "
 "again after refreshing."
-msgstr ""
+msgstr "Uno dei documenti a cui si sta cercando di accedere è stato eliminato, provare di nuovo dopo aver aggiornato la pagina."
 
 #. module: base
 #: model:ir.model,name:base.model_ir_mail_server
@@ -10530,7 +10530,7 @@ msgstr "Dimostrazione dei test web/javascript"
 #. module: base
 #: field:workflow.transition,signal:0
 msgid "Signal (Button Name)"
-msgstr ""
+msgstr "Segnale (Nome Pulsante)"
 
 #. module: base
 #: view:ir.actions.act_window:0
@@ -10634,7 +10634,7 @@ msgstr "res.request.history"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_operations
 msgid "Manufacturing Operations"
-msgstr ""
+msgstr "Operazioni Produzione"
 
 #. module: base
 #: selection:ir.property,type:0
@@ -11975,7 +11975,7 @@ msgstr ""
 #. module: base
 #: selection:res.currency,position:0
 msgid "Before Amount"
-msgstr ""
+msgstr "Prima dell'Importo"
 
 #. module: base
 #: field:res.request,act_from:0 field:res.request.history,act_from:0
@@ -12046,7 +12046,7 @@ msgstr "Le opzioni selezione devono essere nel formato [('chiave','etichetta'), 
 #. module: base
 #: field:res.company,company_registry:0
 msgid "Company Registry"
-msgstr ""
+msgstr "Registro delle Imprese"
 
 #. module: base
 #: view:ir.actions.report.xml:0 view:res.currency:0
